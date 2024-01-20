@@ -19,6 +19,7 @@ body {
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+   
 }
 .search{
     width: 100%;
@@ -116,7 +117,8 @@ body {
     border: #ffffff 1px solid;
     border-radius: 10px;
     margin-bottom: 10px;
-    
+    padding: 10px;
+     margin-right: 10px;
 }
 .heure{
 font-size: 140%;
@@ -124,6 +126,7 @@ font-family: sans-serif;
 border: #ffffff 1px solid;
 border-radius: 10px;
 margin-bottom: 10px;
+padding: 10px;
 }
 
 
@@ -203,3 +206,60 @@ margin-bottom: 10px;
   .darkMode{
    text-align: center;
   }
+
+.title_felicano {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card{
+    width: 90px;
+    min-width: 270px;
+    background: linear-gradient(135deg, #00feba,#5b548a);
+    color: #fff;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    padding: 20px 17px;
+    text-align: center;
+   
+    .search{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  } 
+  .search input{
+      border: 0;
+      outline: 0;
+      background: #ebfffc;
+      color: #555;
+      padding: 5px 12,5px;
+      height: 30px;
+      border-radius: 30px;
+      flex: 1;
+      margin-right: 8px;
+      font-style: 9px;
+  }
+  .search button {
+      bottom: 0;
+      outline: 0;
+      background: #ebfffc;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+  }
+  
+  .search button img {
+      width: 8px;
+  }
+}
+
+}

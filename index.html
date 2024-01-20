@@ -67,32 +67,34 @@
           </label>
     </div>
 
+    <div class="title_felicano"><h1>Projet <b>Application Méteo</b></h1></div>
+
     <div class="card">
-        <div class="timer">
+    <div class="timer">
         <div class="date"></div>
         <div class="heure"></div>
     </div>
-        <div class="search">
+        <form class="search">
             <input class="inputBox" type="text" placeholder="Entrée la ville" spellcheck="false">
-            <button> <img src="/images/search.png" alt=""> </button>
-        </div>
+            <button> <img src="./images/search.png" alt=""> </button>
+        </form>
         <div class="error"> 
             <p>La ville est introuvable ! </p>
         </div>
         <div class="weather">
-            <img src="/images/rain.png" class="weather-icon">
+            <img src="./images/rain.png" class="weather-icon">
             <h1 class="temp">22°C</h1>
              <h2 class="city">New York</h2>
              <div class="details">
                 <div class="col">
-                    <img src="/images/humidity.png" >
+                    <img src="./images/humidity.png" >
                     <div>
                         <p class="humidity">50%</p>
                         <p>Hummidité</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="/images/wind.png" >
+                    <img src="./images/wind.png" >
                     <div>
                         <p class="wind">15 km/h </p>
                         <p>Vitesse de vent</p>
@@ -107,7 +109,7 @@
         const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
         const searchBox =document.querySelector(".inputBox");
-        const searchBtn =document.querySelector(".search button");
+        const searchBtn =document.querySelector(".search");
 
         const weatherIcon = document.querySelector(".weather-icon")
 
@@ -118,9 +120,7 @@
 
 darkMode.addEventListener("change", function() {
     const resultat = document.querySelector("body"); 
-   
-
-    
+  
     if (darkMode.checked) {
         resultat.style.background = "black"; 
 
@@ -195,7 +195,8 @@ heure.innerHTML = `${hours}h:${minutes}`
         }
     
 
-searchBtn.addEventListener("click", ()=>{
+searchBtn.addEventListener("submit", (e)=>{
+    e.preventDefault()
     checkWeather(searchBox.value);
 
     const dblock = document.querySelector(".weather")
